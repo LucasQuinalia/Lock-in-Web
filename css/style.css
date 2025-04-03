@@ -1,0 +1,89 @@
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --light-grey: #E4E4E4;
+    --grey: #6C6C6C;
+    --light-slate: #E1E1FB;
+    --slate: #5863D6;
+    --light-blue: #DDF0FE;
+    --blue: #497EA0;
+    --light-red: #FFE0E0;
+    --red: #C14949;
+    --light-orange: #FFE7E0;
+    --orange: #C16649;
+    --light-yellow: #FEF2DA;
+    --yellow: #D8923A;
+    --light-green: #DFF9DE;
+    --green: #41A159;
+    --light-pink: #FEE7F1;
+    --pink: #B14A9B;
+    --light-purple: #F2DFFD;
+    --purple: #713F88;
+    --font-family: "Inter", sans-serif;
+    --shadow-soft: 0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+.nav-menu {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px 30px;
+    gap: 40px;
+    border: 2px solid var(--light-grey);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+ul  {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.icon {
+    width: 50px;
+    padding: 7.5px;
+    border-radius: 10px;
+    color: var(--grey);
+}
+
+.icon-active {
+    width: 50px;
+    padding: 7.5px;
+    border-radius: 10px;
+    background-color: var(--light-slate);
+    color: var(--slate);
+}
+
+
+
+footer p {
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--slate);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--light-slate);
+}
+
+footer a {
+    color: var(--slate);
+}
