@@ -1,0 +1,19 @@
+{
+    "focuses": [
+        {
+            "focus-id": "1",
+            "focus-name": "Studies",
+            "timer": 60,
+            "short-break": 10,
+            "long-break": 30,
+            "tasks": [
+                {
+                    "task-id": "1",
+                    "task-name": "Study for the test",
+                    "due-date": "2025-02-21",
+                    "status": "completed"
+                }
+            ]
+        }
+    ]
+}
