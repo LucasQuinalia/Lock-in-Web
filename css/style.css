@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
     --background-color: #fff;
     --text-color: #000;
     --light-grey: #E4E4E4;
     --grey: #6C6C6C;
+    --lighter-slate: #F5F5FF;
     --light-slate: #E1E1FB;
     --slate: #5863D6;
     --light-blue: #DDF0FE;
@@ -36,6 +39,11 @@ body {
     color: var(--text-color);
 }
 
+p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .nav-menu {
     display: flex;
     width: fit-content;
@@ -46,6 +54,10 @@ body {
     border: 2px solid var(--light-grey);
     border-radius: 20px;
     box-shadow: var(--shadow-soft);
+}
+
+.header-logo {
+    width: 150px;
 }
 
 ul  {
@@ -59,21 +71,217 @@ li {
 }
 
 .icon {
-    width: 50px;
     padding: 7.5px;
     border-radius: 10px;
     color: var(--grey);
 }
 
 .icon-active {
-    width: 50px;
     padding: 7.5px;
     border-radius: 10px;
     background-color: var(--light-slate);
     color: var(--slate);
 }
 
+.focus-page {
+    width: fit-content;
+    margin: 20px auto;
+}
 
+.focus-page-content {
+    display: flex;
+}
+
+.focus-page h1 {
+    font-size: 64px;
+    text-align: start;
+    margin: 40px 0 20px 0;
+    font-weight: 700;
+}
+
+.focus {
+    width: fit-content;
+    padding: 20px;
+    margin-right: 20px;
+    border: 2px solid var(--light-grey);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.focus-title {
+    display: flex;
+    width: 425px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.focus-subtitle {
+    width: fit-content;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.edit-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--light-grey);
+    color: var(--grey);
+    border: none;
+}
+
+.focus-component {
+    display: flex;
+    width: 300px;
+    margin: 10px 0;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 40px;
+    padding: 7.5px;
+    border-radius: 10px;
+}
+
+.label {
+    font-weight: 500;
+}
+
+.time {
+    font-weight: 300;
+}
+
+.focus-timer {
+    background-color: var(--light-purple);
+    color: var(--purple);
+}
+
+.focus-short-break {
+    background-color: var(--light-blue);
+    color: var(--blue);
+}
+
+.focus-long-break {
+    background-color: var(--light-green);
+    color: var(--green);
+}
+
+.focus-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.focus-task-details {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.focus-task-details input[type="checkbox"] {
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+
+.focus-task-details input[type="checkbox"]:checked {
+    background-color: var(--light-green);
+} 
+
+
+.focus-task-details input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="%2341A159" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.focus-task-details p {
+    margin-left: 10px;
+    color: var(--grey);
+}
+
+.pending {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--grey);
+    background-color: var(--light-grey);
+}
+
+.done {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--green);
+    background-color: var(--light-green);
+}
+
+.late {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--red);
+    background-color: var(--light-red);
+}
+
+.focus-task-date p {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.focus-task-date svg {
+    margin: 0 5px;
+}
+
+.new-task-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--slate);
+    width: 100%;
+    height: 75px;
+    border-radius: 10px;
+    background-color: var(--lighter-slate);
+    border: 2px dashed var(--slate);
+    margin-top: 20px;
+}
+
+.new-task-btn p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.new-focus-btn {
+    margin: 0 auto;
+    display: flex;
+    width: fit-content;
+}
+
+.new-focus-btn svg {
+    padding: 7.5px;
+    border-radius: 10px;
+    background-color: var(--light-slate);
+    color: var(--slate);
+}
+
+footer {
+    margin-top: 50px;
+}
 
 footer p {
     width: fit-content;
