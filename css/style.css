@@ -73,16 +73,40 @@ li {
 }
 
 .icon {
-    padding: 0.5rem;
+    padding: 0.25rem;
     border-radius: 0.625rem;
     color: var(--grey);
+    transition: 0.25s ease;
+    border: 0.125rem solid transparent;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: var(--light-grey);
+}
+
+.icon:active {
+    background-color: var(--light-slate);
+    color: var(--slate);
 }
 
 .icon-active {
-    padding: 0.5rem;
+    padding: 0.25rem;
     border-radius: 0.625rem;
     background-color: var(--light-slate);
     color: var(--slate);
+    border: 0.125rem solid transparent;
+    transition: 0.25s ease;
+}
+
+.icon-active:hover {
+    border: 0.125rem solid var(--slate);
+}
+
+.icon-active:active {
+    transition: 0.1s ease;
+    color: var(--light-slate);
+    background-color: var(--slate);
 }
 
 .focus-page {
@@ -114,17 +138,16 @@ li {
     width: fit-content;
     border-radius: 0.625rem;
     background-color: var(--light-slate);
-    border: 0.125rem solid var(--light-slate);
+    border: 0.125rem solid transparent;
     transition: 0.25s ease;
+    cursor: pointer;
 }
 
 .new-focus-btn:hover {
-    cursor: pointer;
     border: 0.125rem solid var(--slate);
 }
 
 .new-focus-btn:active {
-    cursor: pointer;
     border: 0.125rem solid var(--slate);
     background-color: var(--slate);
     color: var(--light-slate);
@@ -167,7 +190,19 @@ li {
     border-radius: 0.625rem;
     background-color: var(--light-grey);
     color: var(--grey);
-    border: none;
+    border: 0.125rem solid transparent;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    border: 0.125rem solid var(--grey);
+}
+
+.edit-btn:active {
+    transition: 0.1s ease;
+    color: var(--light-grey);
+    background-color: var(--grey);
 }
 
 .focus-component {
@@ -257,6 +292,9 @@ li {
     align-items: center;
     border-radius: 0.625rem;
     padding: 0.3125rem;
+    border: 0.125rem solid transparent;
+    transition: 0.25s ease;
+    cursor: pointer;
 }
 
 .pending {
@@ -264,9 +302,29 @@ li {
     background-color: var(--light-grey);
 }
 
+.pending:hover {
+    border: 0.125rem solid var(--grey);
+}
+    
+.pending:active {
+    transition: 0.1s ease;
+    color: var(--light-grey);
+    background-color: var(--grey);
+}
+    
 .done {
     color: var(--green);
     background-color: var(--light-green);
+}
+
+.done:hover {
+    border: 0.125rem solid var(--green);
+}
+    
+.done:active {
+    transition: 0.1s ease;
+    color: var(--light-green);
+    background-color: var(--green);
 }
 
 .late {
@@ -274,9 +332,20 @@ li {
     background-color: var(--light-red);
 }
 
+.late:hover {
+    border: 0.125rem solid var(--red);
+}
+    
+.late:active {
+    transition: 0.1s ease;
+    color: var(--light-red);
+    background-color: var(--red);
+}
+
 .focus-task-date p {
     font-size: 1.25rem;
     margin: 0 0.3125rem;
+    text-align: center;
 }
 
 .focus-task-date svg {
@@ -294,7 +363,21 @@ li {
     background-color: var(--lighter-slate);
     border: 0.125rem dashed var(--slate);
     margin-top: 1.25rem;
+    transition: 0.25s ease;
+    cursor: pointer;
 }
+
+.new-task-btn:hover {
+    background-color: var(--light-slate);
+}
+
+.new-task-btn:active {
+    transition: 0.1s ease;
+    color: var(--light-slate);
+    background-color: var(--slate);
+    border: 0.125rem dashed var(--light-slate);
+}
+
 
 .new-task-btn p {
     margin-left: 0.625rem;
