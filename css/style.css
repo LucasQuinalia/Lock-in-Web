@@ -37,10 +37,11 @@ body {
     background-color: var(--background-color);
     font-family: var(--font-family);
     color: var(--text-color);
+    font-size: 1rem;
 }
 
 p {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -48,22 +49,23 @@ p {
     display: flex;
     width: fit-content;
     align-items: center;
-    margin: 20px auto;
-    padding: 10px 30px;
-    gap: 40px;
-    border: 2px solid var(--light-grey);
-    border-radius: 20px;
+    margin: 2rem auto;
+    padding: 0.625rem 1.875rem;
+    gap: 2.5rem;
+    border: 0.125rem solid var(--light-grey);
+    border-radius: 1.25rem;
     box-shadow: var(--shadow-soft);
 }
 
 .header-logo {
-    width: 150px;
+    width: 10rem;
+    max-width: 100%;
 }
 
 ul  {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 li {
@@ -71,61 +73,98 @@ li {
 }
 
 .icon {
-    padding: 7.5px;
-    border-radius: 10px;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
     color: var(--grey);
 }
 
 .icon-active {
-    padding: 7.5px;
-    border-radius: 10px;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
     background-color: var(--light-slate);
     color: var(--slate);
 }
 
 .focus-page {
-    width: fit-content;
-    margin: 20px auto;
+    width: 100%;
+    margin: 2rem auto;
+    max-width: 100rem;
 }
 
 .focus-page-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
 }
 
 .focus-page h1 {
-    font-size: 64px;
+    font-size: 4rem;
     text-align: start;
-    margin: 40px 0 20px 0;
     font-weight: 700;
 }
 
-.focus {
+.new-focus-btn {
+    display: flex;
+    padding: 0.75rem 1rem;
+    color: var(--slate);
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
     width: fit-content;
-    padding: 20px;
-    margin-right: 20px;
-    border: 2px solid var(--light-grey);
-    border-radius: 20px;
+    border-radius: 0.625rem;
+    background-color: var(--light-slate);
+    border: 0.125rem solid var(--light-slate);
+    transition: 0.25s ease;
+}
+
+.new-focus-btn:hover {
+    cursor: pointer;
+    border: 0.125rem solid var(--slate);
+}
+
+.new-focus-btn:active {
+    cursor: pointer;
+    border: 0.125rem solid var(--slate);
+    background-color: var(--slate);
+    color: var(--light-slate);
+    transition: 0.1s ease;
+}
+
+.focus-page-title {
+    display: flex;
+    margin: 2.5rem 1.25rem 1.25rem 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.focus {
+    max-width: 32rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1.5rem;
+    border: 0.125rem solid var(--light-grey);
+    border-radius: 1.25rem;
     box-shadow: var(--shadow-soft);
 }
 
 .focus-title {
     display: flex;
-    width: 425px;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
+    gap: 1rem;
 }
 
 .focus-subtitle {
-    width: fit-content;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .edit-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 0.625rem;
     background-color: var(--light-grey);
     color: var(--grey);
     border: none;
@@ -133,13 +172,13 @@ li {
 
 .focus-component {
     display: flex;
-    width: 300px;
-    margin: 10px 0;
+    width: 100%;
+    margin: 0.625rem 0;
     justify-content: space-between;
     flex-direction: row;
-    gap: 40px;
-    padding: 7.5px;
-    border-radius: 10px;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
 }
 
 .label {
@@ -169,22 +208,22 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .focus-task-details {
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
 }
 
 .focus-task-details input[type="checkbox"] {
     appearance: none;
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     display: inline-block;
     position: relative;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: var(--light-grey);
     cursor: pointer;
 }
@@ -192,7 +231,6 @@ li {
 .focus-task-details input[type="checkbox"]:checked {
     background-color: var(--light-green);
 } 
-
 
 .focus-task-details input[type="checkbox"]:checked::after {
     content: "";
@@ -208,44 +246,41 @@ li {
 }
 
 .focus-task-details p {
-    margin-left: 10px;
+    margin-left: 0.625rem;
     color: var(--grey);
 }
 
-.pending {
+.pending,
+.done,
+.late {
     display: flex;
     align-items: center;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 0.625rem;
+    padding: 0.3125rem;
+}
+
+.pending {
     color: var(--grey);
     background-color: var(--light-grey);
 }
 
 .done {
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 5px;
     color: var(--green);
     background-color: var(--light-green);
 }
 
 .late {
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 5px;
     color: var(--red);
     background-color: var(--light-red);
 }
 
 .focus-task-date p {
-    font-size: 20px;
-    margin: 0 5px;
+    font-size: 1.25rem;
+    margin: 0 0.3125rem;
 }
 
 .focus-task-date svg {
-    margin: 0 5px;
+    margin: 0 0.3125rem;
 }
 
 .new-task-btn {
@@ -254,44 +289,159 @@ li {
     align-items: center;
     color: var(--slate);
     width: 100%;
-    height: 75px;
-    border-radius: 10px;
+    height: 4.6875rem;
+    border-radius: 0.625rem;
     background-color: var(--lighter-slate);
-    border: 2px dashed var(--slate);
-    margin-top: 20px;
+    border: 0.125rem dashed var(--slate);
+    margin-top: 1.25rem;
 }
 
 .new-task-btn p {
-    margin-left: 10px;
-    font-size: 20px;
-}
-
-.new-focus-btn {
-    margin: 0 auto;
-    display: flex;
-    width: fit-content;
-}
-
-.new-focus-btn svg {
-    padding: 7.5px;
-    border-radius: 10px;
-    background-color: var(--light-slate);
-    color: var(--slate);
+    margin-left: 0.625rem;
+    font-size: 1.25rem;
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 3.125rem;
+    text-align: center;
 }
 
 footer p {
-    width: fit-content;
-    margin: 0 auto;
+    display: inline-block;
     color: var(--slate);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
     background-color: var(--light-slate);
 }
 
 footer a {
     color: var(--slate);
+}
+
+svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.edit-svg, .new-focus-svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.date-svg, .new-task-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 1.2vw;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    svg {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .edit-svg, .new-focus-svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .date-svg, .new-task-svg {
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+
+    .focus-page h1 {
+        font-size: 4rem;
+    }
+
+    .focus-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .focus-task-date p {
+        font-size: 1.75rem;
+    }
+
+    .new-task-btn p {
+        font-size: 1.75rem;
+    }
+    
+
+    .focus-page-content {
+        max-width: 90vw;
+        padding: 0 2vw;
+        gap: 2vw;
+    }
+
+    .nav-menu {
+        gap: 2.5vw;
+        padding: 1vw 3vw;
+    }
+
+    .header-logo {
+        width: 15vw;
+    }
+
+    .edit-btn {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .focus-task-details input[type="checkbox"] {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .focus-task-details input[type="checkbox"]:checked::after {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .focus-page h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .edit-svg, .new-focus-svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .date-svg, .new-task-svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .focus-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .focus-page-content {
+        padding: 0 1.25rem;
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .header-logo {
+        display: block;
+        margin: 0 auto;
+    }
 }
