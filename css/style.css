@@ -49,7 +49,7 @@ p {
     display: flex;
     width: fit-content;
     align-items: center;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 0.625rem 1.875rem;
     gap: 2.5rem;
     border: 0.125rem solid var(--light-grey);
@@ -110,7 +110,7 @@ li {
 }
 
 .focus-page {
-    width: 100%;
+    width: 95%;
     margin: 2rem auto;
     max-width: 100rem;
 }
@@ -156,7 +156,7 @@ li {
 
 .focus-page-title {
     display: flex;
-    margin: 2.5rem 1.25rem 1.25rem 1.25rem;
+    margin: 1rem 1.25rem 1.25rem 1.25rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -210,7 +210,7 @@ li {
     width: 100%;
     margin: 0.625rem 0;
     justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
     gap: 1rem;
     padding: 0.5rem;
     border-radius: 0.625rem;
@@ -385,7 +385,7 @@ li {
 }
 
 footer {
-    margin-top: 3.125rem;
+    margin: 2rem 0;
     text-align: center;
 }
 
@@ -414,6 +414,127 @@ svg {
 .date-svg, .new-task-svg {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.focus-name {
+    width: 100%;
+    background-color: var(--light-grey);
+    color: var(--grey);
+    border-radius: 0.625rem;
+    border: none;
+    padding: 0.5rem;
+    border: 0.125rem solid transparent;
+}
+
+.focus-name:focus {
+    border: 0.125rem solid var(--grey);
+    box-shadow: none;
+    outline: none;
+}
+
+.timer-input,
+.short-break-input,
+.long-break-input {
+    border: 0.125rem solid transparent;
+    padding: 0.5rem;
+    border-radius: 0.4375rem;
+}
+
+.timer-input {
+    color: var(--purple);
+}
+
+.short-break-input {
+    color: var(--blue);
+}
+
+.long-break-input {
+    color: var(--green);
+}
+.timer-input:focus {
+    border: 0.125rem solid var(--purple);
+    box-shadow: none;
+    outline: none;
+}
+
+.short-break-input:focus {
+    border: 0.125rem solid var(--blue);
+    box-shadow: none;
+    outline: none;
+}
+
+.long-break-input:focus {
+    border: 0.125rem solid var(--green);
+    box-shadow: none;
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
+
+.new-focus-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    gap: 1.25rem;
+}
+
+.cancel-btn,
+.save-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    height: 4.6875rem;
+    border-radius: 0.625rem;
+    border: 0.125rem solid transparent;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.new-focus-options svg {
+    width: 2rem;
+}
+
+.cancel-btn {
+    background-color: var(--light-red);
+    color: var(--red);
+}
+
+.save-btn {
+    background-color: var(--light-green);
+    color: var(--green);
+}
+
+.cancel-btn:hover {
+    border: 0.125rem solid var(--red);
+}
+
+.save-btn:hover {
+    border: 0.125rem solid var(--green);
+}
+
+.cancel-btn:active {
+    background-color: var(--red);
+    color: var(--light-red);
+    transition: 0.1s ease;
+}
+
+.save-btn:active {
+    background-color: var(--green);
+    color: var(--light-green);
+    transition: 0.1s ease;
 }
 
 @media (min-width: 2560px) {
